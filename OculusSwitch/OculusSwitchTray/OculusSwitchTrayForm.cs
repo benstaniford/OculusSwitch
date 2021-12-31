@@ -6,6 +6,8 @@ namespace OculusSwitchTray
 {
     public partial class OculusSwitchTrayForm : Form
     {
+        private const string OCULUS_SWITCH_SERVICE_CLSID = "{F47CC890-2151-4DC9-AD0B-AB970EB14466}";
+
         public OculusSwitchTrayForm()
         {
             InitializeComponent();    
@@ -20,15 +22,17 @@ namespace OculusSwitchTray
         public static dynamic ComObjectGet()
         {
             const string progID = "OculusSwitchService.OculusControlComService";
-            Type comType = Type.GetTypeFromProgID(progID, true);
+            Type comType = Type.GetTypeFromProgID(progID, false);
+            if (comType == null)
+            {
+                var bar = Guid.Parse (OCULUS_SWITCH_SERVICE_CLSID);  // TODO Class not registered at the mo..
+                comType = Type.GetTypeFromCLSID (bar);
+            }
+
             if (comType == null)
             {
                 throw new Exception("Oculus Switch COM service does not appear to be started");
             }
-
-            //var bar = Guid.Parse ("99929AA7-0334-4B2D-AC74-5E282A12D06C");
-            //Type foo = Type.GetTypeFromCLSID (bar);
-
 
             dynamic comObject = Activator.CreateInstance(comType);
 

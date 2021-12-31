@@ -1,6 +1,6 @@
 For now, the service can be installed with:
 
-"C:\Windows\Microsoft.NET\Framework\v4.0.30319\InstallUtil.exe" OculusSwitchService.exe
+"C:\Windows\Microsoft.NET\Framework\v4.0.30319\InstallUtil.exe" c:\dev\3rdParty\OculusSwitch\OculusSwitch\OculusSwitchService\bin\Debug\OculusSwitchService.exe
 
 
 https://stackoverflow.com/questions/8164859/install-a-windows-service-using-a-windows-command-prompt
@@ -11,4 +11,9 @@ https://docs.microsoft.com/en-us/dotnet/framework/windows-services/how-to-instal
 
 https://stackoverflow.com/questions/7922105/install-windows-service-created-in-visual-studio
 
+https://arcanecode.com/2007/05/23/windows-services-in-c-adding-the-installer-part-1/
+https://arcanecode.com/2007/05/23/windows-services-in-c-adding-the-installer-part-2/
+https://arcanecode.com/2007/05/23/windows-services-in-c-adding-the-installer-part-3/
 
+# Explains how to create a COM service using c#
+https://limbioliong.wordpress.com/2011/08/30/creating-a-com-server-using-c/

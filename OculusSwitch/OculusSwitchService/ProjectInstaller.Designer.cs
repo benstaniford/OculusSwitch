@@ -43,8 +43,8 @@ namespace OculusSwitchService
             // OculusSwitchService
             // 
             this.oculusSwitchServiceInstaller.Description = "Service used by the Oculus Switch Tray App";
-            this.oculusSwitchServiceInstaller.DisplayName = "Service used by the Oculus Switch Tray App";
-            this.oculusSwitchServiceInstaller.ServiceName = "Oculus Switch Service";
+            this.oculusSwitchServiceInstaller.DisplayName = "Oculus Switch Service";
+            this.oculusSwitchServiceInstaller.ServiceName = "OculusSwitchService";
             this.oculusSwitchServiceInstaller.StartType = ServiceStartMode.Automatic;
 
             // 
