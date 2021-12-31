@@ -1,4 +1,6 @@
 ﻿
+using System.ServiceProcess;
+
 namespace OculusSwitchService
 {
     partial class ProjectInstaller
@@ -29,32 +31,33 @@ namespace OculusSwitchService
         /// </summary>
         private void InitializeComponent()
         {
-            this.serviceProcessInstaller1 = new System.ServiceProcess.ServiceProcessInstaller();
-            this.OculusSwitchService = new System.ServiceProcess.ServiceInstaller();
+            this.oculusSwitchServiceProcessInstaller = new System.ServiceProcess.ServiceProcessInstaller();
+            this.oculusSwitchServiceInstaller = new System.ServiceProcess.ServiceInstaller();
             // 
-            // serviceProcessInstaller1
+            // serviceProcessInstaller
             // 
-            this.serviceProcessInstaller1.Account = System.ServiceProcess.ServiceAccount.LocalSystem;
-            this.serviceProcessInstaller1.Password = null;
-            this.serviceProcessInstaller1.Username = null;
+            this.oculusSwitchServiceProcessInstaller.Account = System.ServiceProcess.ServiceAccount.LocalSystem;
+            this.oculusSwitchServiceProcessInstaller.Password = null;
+            this.oculusSwitchServiceProcessInstaller.Username = null;
             // 
             // OculusSwitchService
             // 
-            this.OculusSwitchService.Description = "Service used by the Oculus Switch Tray App";
-            this.OculusSwitchService.DisplayName = "Service used by the Oculus Switch Tray App";
-            this.OculusSwitchService.ServiceName = "Oculus Switch Service";
+            this.oculusSwitchServiceInstaller.Description = "Service used by the Oculus Switch Tray App";
+            this.oculusSwitchServiceInstaller.DisplayName = "Service used by the Oculus Switch Tray App";
+            this.oculusSwitchServiceInstaller.ServiceName = "Oculus Switch Service";
+            this.oculusSwitchServiceInstaller.StartType = ServiceStartMode.Automatic;
+
             // 
             // ProjectInstaller
             // 
             this.Installers.AddRange(new System.Configuration.Install.Installer[] {
-            this.serviceProcessInstaller1,
-            this.OculusSwitchService});
-
+            this.oculusSwitchServiceProcessInstaller,
+            this.oculusSwitchServiceInstaller});
         }
 
         #endregion
 
-        private System.ServiceProcess.ServiceProcessInstaller serviceProcessInstaller1;
-        private System.ServiceProcess.ServiceInstaller OculusSwitchService;
+        private System.ServiceProcess.ServiceProcessInstaller oculusSwitchServiceProcessInstaller;
+        private System.ServiceProcess.ServiceInstaller oculusSwitchServiceInstaller;
     }
 }

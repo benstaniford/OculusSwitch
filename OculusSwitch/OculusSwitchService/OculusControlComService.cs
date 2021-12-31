@@ -5,7 +5,7 @@ namespace OculusSwitchService
     [ComVisible(true)]
     public class OculusControlComService
     {
-        public int TetingThings()
+        public int TestingThings()
         {
             return 23;
         }

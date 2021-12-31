@@ -7,4 +7,8 @@ https://stackoverflow.com/questions/8164859/install-a-windows-service-using-a-wi
 
 https://stackoverflow.com/questions/59434328/how-to-call-a-com-object-from-c-sharp
 
+https://docs.microsoft.com/en-us/dotnet/framework/windows-services/how-to-install-and-uninstall-services
+
+https://stackoverflow.com/questions/7922105/install-windows-service-created-in-visual-studio
+
 

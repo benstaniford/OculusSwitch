@@ -20,7 +20,7 @@ namespace OculusSwitchTray
         public static dynamic ComObjectGet()
         {
             const string progID = "OculusSwitchService.OculusControlComService";
-            Type comType = Type.GetTypeFromProgID(progID);
+            Type comType = Type.GetTypeFromProgID(progID, true);
             if (comType == null)
             {
                 throw new Exception("Oculus Switch COM service does not appear to be started");
@@ -29,7 +29,13 @@ namespace OculusSwitchTray
             //var bar = Guid.Parse ("99929AA7-0334-4B2D-AC74-5E282A12D06C");
             //Type foo = Type.GetTypeFromCLSID (bar);
 
+
             dynamic comObject = Activator.CreateInstance(comType);
+
+            // Rather than dynamic, could...
+            //IMyClassAdapter myClassAdapter = (IMyClassAdapter)myClassAdapterInstance;
+            //myClassAdapter.DoNet4Action();
+
             return comObject;
         }
 

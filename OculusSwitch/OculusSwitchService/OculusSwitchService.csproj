@@ -35,6 +35,9 @@
   <PropertyGroup>
     <ApplicationIcon>Oculus.ico</ApplicationIcon>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>OculusSwitchService.Program</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Configuration.Install" />
