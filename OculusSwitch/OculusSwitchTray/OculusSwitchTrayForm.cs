@@ -4,9 +4,9 @@ using System.Windows.Forms;
 
 namespace OculusSwitchTray
 {
-    public partial class Form1 : Form
+    public partial class OculusSwitchTrayForm : Form
     {
-        public Form1()
+        public OculusSwitchTrayForm()
         {
             InitializeComponent();    
         }
@@ -25,13 +25,13 @@ namespace OculusSwitchTray
             info.UseShellExecute = false;
             Process processChild = Process.Start(info);
             {
-                    this.notifyIcon.BalloonTipText = "Oculus has been turned On";
-                    this.notifyIcon.BalloonTipTitle = "Oculus Switch";
-                    this.notifyIcon.Icon = OculusSwitchTray.Properties.Resources.Oculus;
-                    this.notifyIcon.Visible = true;
-                    this.notifyIcon.ShowBalloonTip(5);
-                    this.notifyIcon.Icon = OculusSwitchTray.Properties.Resources.Green;
-                }
+                this.notifyIcon.BalloonTipText = "Oculus has been turned On";
+                this.notifyIcon.BalloonTipTitle = "Oculus Switch";
+                this.notifyIcon.Icon = OculusSwitchTray.Properties.Resources.Oculus;
+                this.notifyIcon.Visible = true;
+                this.notifyIcon.ShowBalloonTip(5);
+                this.notifyIcon.Icon = OculusSwitchTray.Properties.Resources.Green;
+            }
 
         }
 
@@ -64,8 +64,8 @@ namespace OculusSwitchTray
 
         //This Exits the App
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
-                {
-                    Application.Exit();
+        {
+            Application.Exit();
 
             /*
             DialogResult messageBoxResult = MessageBox.Show
@@ -75,7 +75,7 @@ namespace OculusSwitchTray
 
             //MessageBox.Show("Oculus has been turned On");
             */
-                }
+        }
 
 
     }
