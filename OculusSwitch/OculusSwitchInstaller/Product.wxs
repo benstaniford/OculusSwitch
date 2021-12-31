@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
-	<Product Id="*" Name="OculusSwitchInstaller" Language="1033" Version="1.0.0.0" Manufacturer="" UpgradeCode="31eb7b6e-f1e1-4525-bc29-e7a7ef05c379">
+	<Product Id="*" Name="Oculus Switch" Language="1033" Version="1.0.0.0" Manufacturer="Commander Nerwan" UpgradeCode="31eb7b6e-f1e1-4525-bc29-e7a7ef05c379">
 		<Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
 
 		<MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
