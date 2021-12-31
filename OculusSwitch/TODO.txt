@@ -1,0 +1,10 @@
+For now, the service can be installed with:
+
+"C:\Windows\Microsoft.NET\Framework\v4.0.30319\InstallUtil.exe" OculusSwitchService.exe
+
+
+https://stackoverflow.com/questions/8164859/install-a-windows-service-using-a-windows-command-prompt
+
+https://stackoverflow.com/questions/59434328/how-to-call-a-com-object-from-c-sharp
+
+
