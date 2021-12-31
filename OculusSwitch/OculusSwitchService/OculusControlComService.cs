@@ -3,7 +3,11 @@
 namespace OculusSwitchService
 {
     [ComVisible(true)]
-    class OculusControlComService
+    public class OculusControlComService
     {
+        public int TetingThings()
+        {
+            return 23;
+        }
     }
 }
