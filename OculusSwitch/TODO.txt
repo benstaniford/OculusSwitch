@@ -1,5 +1,6 @@
 For now, the service can be installed with:
 
+"C:\Windows\Microsoft.NET\Framework\v4.0.30319\RegAsm.exe" OculusSwitchService.exe
 "C:\Windows\Microsoft.NET\Framework\v4.0.30319\InstallUtil.exe" c:\dev\3rdParty\OculusSwitch\OculusSwitch\OculusSwitchService\bin\Debug\OculusSwitchService.exe
 
 
@@ -17,3 +18,6 @@ https://arcanecode.com/2007/05/23/windows-services-in-c-adding-the-installer-par
 
 # Explains how to create a COM service using c#
 https://limbioliong.wordpress.com/2011/08/30/creating-a-com-server-using-c/
+
+# Example of an out-of-process COM service in the form of a Windows service
+http://microsoftdevelopernetworksamples.blogspot.com/2017/06/windowsappscscomservice.html
