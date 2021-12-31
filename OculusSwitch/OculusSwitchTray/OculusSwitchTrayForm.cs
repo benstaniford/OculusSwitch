@@ -76,7 +76,5 @@ namespace OculusSwitchTray
             //MessageBox.Show("Oculus has been turned On");
             */
         }
-
-
     }
 }
