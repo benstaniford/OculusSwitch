@@ -20,21 +20,33 @@ namespace OculusSwitchTray
         public static dynamic ComObjectGet()
         {
             const string progID = "OculusSwitchService.OculusControlComService";
-            Type foo = Type.GetTypeFromProgID(progID);
+            Type comType = Type.GetTypeFromProgID(progID);
+            if (comType == null)
+            {
+                throw new Exception("Oculus Switch COM service does not appear to be started");
+            }
 
             //var bar = Guid.Parse ("99929AA7-0334-4B2D-AC74-5E282A12D06C");
             //Type foo = Type.GetTypeFromCLSID (bar);
 
-            dynamic COMobject = Activator.CreateInstance(foo);
-            return COMobject;
+            dynamic comObject = Activator.CreateInstance(comType);
+            return comObject;
         }
 
         //This Starts the Oculus
         private void turnOnToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var comServer = ComObjectGet();
-            int result = comServer.Testingthings();
-            MessageBox.Show($"Result from COM was {result}");
+            try
+            {
+                var comServer = ComObjectGet();
+                int result = comServer.TestingThings();
+                MessageBox.Show($"Result from COM was {result}");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "COM Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
             ProcessStartInfo info = new ProcessStartInfo(@"C:\StartOculus.bat");
             info.CreateNoWindow = true;
